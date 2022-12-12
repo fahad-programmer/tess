@@ -1,0 +1,470 @@
+{"intents": [
+    {
+        "tag": "greetings",
+        "patterns": ["hello", "hey", "good morning", "Hey man", "wake up layla"],
+        "responses": ["greet_main().decode('utf-8')"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["bye", "see you later", "good night"],
+        "responses": ["saying_bye_main().decode('utf-8')"]
+    },
+    
+    {
+        "tag": "thanks",
+        "patterns": ["thank you very much", "it is so nice of you", "you made my day", "thanks", "thanks for helping out", "you are the best", "you are genius"],
+        "responses": ["saying_thanks_main().decode('utf-8')"]
+    },
+
+    {
+        "tag": "age",
+        "patterns": ["how old", "what is my age", "age?"],
+        "responses": ["age_question_main().decode('utf-8')"]
+    },
+    {
+        "tag": "name",
+        "patterns": ["what is your name", "what should i call you"],
+        "responses": ["assistant_name().decode('utf-8')"]
+    },
+    {
+        "tag": "time",
+        "patterns": ["what is the time", "time?"],
+        "responses": ["current_time().decode('utf-8')"]
+    },
+    {
+        "tag": "wikipedia",
+        "patterns": ["wikipedia", "search wikipedia", "tell me about"],
+        "responses": ["website_control.wikipedia_search(query)"]
+    },
+    {
+        "tag": "google map",
+        "patterns": ["search google map from clipboard", "search google map"],
+        "responses": ["website_control.google_map_search(query)"]
+    },
+    {
+        "tag": "location",
+        "patterns": ["city name", "what is the name of this city", "current city", "name of city", "ip address", "computer ip", "what is my computer ip", "continent name", "what is the name of this continent", "current continent", "name of continent"],
+        "responses": ["country_info(query)"]
+    },
+    {
+        "tag": "weather",
+        "patterns": ["weather", "how is the weather", "what is the temperature", "temperature", "city temperature", "wind speed", "speed of wind", "what is the min temperature", "what is the max temperature", "what is the atmospheric pressure", "pressure of atmosphere", "what is the humidity level", "what are my coordinates", "my coordinates"],
+        "responses": ["weather_info(query)"]
+    },
+    {
+        "tag": "website",
+        "patterns": ["open"],
+        "responses": ["website_control.main(query)"]
+    },
+    {
+        "tag": "website search",
+        "patterns": ["search how to bake on google", "search youtube on google", "search yts movies on google"],
+        "responses": ["website_control.search_websites(query)"]
+    },
+    {
+        "tag": "change volume",
+        "patterns": ["change volume to"],
+        "responses": ["video_controls.change_volume(query)"]
+    },
+    {
+        "tag": "Date",
+        "patterns" : ["what is the date", "tell me the date", "what is the day", "what is the month"],
+        "responses": ["current_date_main().decode('utf-8')"] 
+    },
+    {
+        "tag": "addition",
+        "patterns": ["please add following", "add these", "do addition", "addition", "what is the sum of", "find sum", "find sum of following"],
+        "responses": ["addition(query).decode('utf-8')"]
+    },
+    {
+        "tag": "subtraction",
+        "patterns": ["please subtract following", "subtract these", "do subtraction", "subtraction", "what is the subtract of", "minus these", "find minus of following"],
+        "responses": ["subtract(query).decode('utf-8')"]
+    },
+    {
+        "tag": "multiplication",
+        "patterns": ["please multiply following", "multiply these", "do multiplication", "miltiplication", "what is the multiply of", "multiply these", "find multiple of following"],
+        "responses": ["multiply(query).decode('utf-8')"]
+    },
+    {
+        "tag": "divide",
+        "patterns": ["please divide following", "divide these", "do divide", "divide", "what is the divide of", "divide these", "find divide of following"],
+        "responses": ["divide(query).decode('utf-8')"]
+    },
+    {
+        "tag": "Url Shorten",
+        "patterns": ["Short the url from my clipboard", "short my url", "short this url"],
+        "responses": ["basic_functions.urlshorten(query)"]
+    },
+    {
+        "tag": "system information",
+        "patterns": ["show the system information", "system information", "what are current system spec", "information about current spec"],
+        "responses": ["system_info()", "syst_info()"]
+    },
+    {
+        "tag": "Love Calculator",
+        "patterns": ["Calculate love percentage between Imran Akbar and Laiba Sadaf", "Calculate love between ali and ahmed", "how much love is between ali and aqash"],
+        "responses": ["basic_functions.lovecal(query)"]
+    },
+    {
+        "tag": "Joke",
+        "patterns": ["tell me a joke", "give me a joke", "i want to hear a joke"],
+        "responses": ["basic_functions.jokes(query)"]
+    },
+    {
+        "tag": "Definition",
+        "patterns": ["What is meant by Cobra ", "meaning of Cobra", "What is a radio"],
+        "responses": ["basic_functions.word_def(query)"]
+    },
+    {
+        "tag":"mathematics",
+        "patterns":["find sin of", "find cos", "find square root of", "round off the following", "find tan of", "find log off", "find the", "sin", "cos", "tan", "square root", "round"],
+        "responses":["maths_func(query).decode('utf-8')"]
+    },
+    {
+        "tag":"None",
+        "patterns":["None", ""],
+        "responses":["unable_recognize()"]
+    }, 
+   
+    {
+        "tag": "childhood",
+        "patterns": ["how was your childhood", "how was it when you were kid", "how you spend your childhood"],
+        "responses":["Being in beta is sort of like being a kid. I learned a lot before I was ready for release."]
+    },
+    {
+        "tag": "smart you",
+        "patterns": ["how smart are you", "are you smart", "smart are you"],
+        "responses":["It might seem like I'm smart, but I'm just good at searching."]
+    },
+    {
+        "tag": "smart me",
+        "patterns":["how smart am I", "am i smart", "am i intelligent", "really am i smart"],
+        "responses":["You might be even cleverer than Grace Hopper - she invented the first ever computer."]
+    }, 
+    {
+        "tag":"get cold",
+        "patterns":["Do you get cold", "do you get cold", "do you become sick"],
+        "responses":["I catch a bug now and then."]
+    },
+    {
+        "tag":"personality",
+        "patterns":["describe your personality.", "what type of person you are", "who you are"],
+        "responses":["I like the sound of a go-getter, it's kind of what I do when I search."]
+    },
+    {
+        "tag": "wearning",
+        "patterns":["what are you wearing", "what do you wear"],
+        "responses":["Just some bits and bobs I picked up in engineering."]
+    },
+    {
+        "tag": "love",
+        "patterns":["what is love", "what is your definition of love"],
+        "responses":["Love is that feeling you get in your stomach when you just can't stop thinking about someone. Unless you've got indigestion."]
+    },
+    {
+        "tag": "love believe",
+        "patterns":["do you believe in love", "what is your believe in love"],
+        "responses":["I'd love to find love, but I don't know what to search for."]
+    },
+    {
+        "tag": "First Crush",
+        "patterns":["Who was your first crush?"],
+        "responses":["The Opportunity rover on Mars is my all-time crush. What an adventurer."]
+    },
+    {
+        "tag": "Quest",
+        "patterns":["What is your quest?"],
+        "responses":["I journey across many lands and many cables in the search for information and cool stuff."]
+    },
+    {
+        "tag": "Looks",
+        "patterns":["What do you look like?"],
+        "responses":["I’m a fun-loving, epic-searching cool cat. But not like, an actual cat. I’ve said too much."]
+    },
+    {
+        "tag": "Turing Test",
+        "patterns":["Can you pass the Turing test?"],
+        "responses":["I don’t mind if you can tell I’m not human. As long as I’m helpful, I’m all good."]
+    },
+    {
+        "tag": "Love For Star Trek",
+        "patterns":["Do you like Star Trek or Star Wars?"],
+        "responses":["The USS Enterprise, with Obi-Wan Kenobi at the helm."]
+    },
+    {
+        "tag": "Storm Trooper",
+        "patterns":["Aren’t you a little short to be a Storm Trooper?"],
+        "responses":["I’m a Layla. I’m here to rescue you. And I think I look more like an RD unit."]
+    },
+    {
+        "tag": "vector victor",
+        "patterns":["What’s your vector, Victor?"],
+        "responses":["We have clearance, Clarence."]
+    },
+    {
+        "tag": "skynet",
+        "patterns":["Are you Skynet?"],
+        "responses":["I’m glad I’m not. Skynet is more focused on extermination than helpfulness. It would make a terrible Assistant."]
+    },
+    {
+        "tag": "Muffin Man",
+        "patterns":["Do you know the Muffin Man?"],
+        "responses":["The one who lives on Drury Lane? Yeah, nice guy."]
+    },
+    {
+        "tag": "unladen swallow speed",
+        "patterns":["What’s the airspeed velocity of an unladen swallow?", "what is the speed of unladen swallow"],
+        "responses":["About 24 mph (39 kmph) but significantly slower when carrying coconut shells"]
+    },
+    {
+        "tag": "imagination",
+        "patterns":["Do you have an imagination?"],
+        "responses":["I’m imagining winning a prize for most sensitive and supportive friend."]
+    },
+    {
+        "tag": "Morse Code",
+        "patterns":["Do you speak Morse code"],
+        "responses":["Da-dit, da-da, dit, dit, dit. That means yes."]
+    },
+    {
+        "tag": "Layla Rap",
+        "patterns":["Can you rap?"],
+        "responses":["*Raps* “So you want to hear my flow, well there is something that you should know. I’m really into being as helpful as possible. I think you and I, we’re gonna be unstoppable.”"]
+    },
+    {
+        "tag": "layla Lonliest number",
+        "patterns":["What is the loneliest number?"],
+        "responses":["One is the loneliest number that you’ll ever do. That sentence sounds weird."]
+    },
+    {
+        "tag": "layla cake lie",
+        "patterns":["Is the cake a lie?"],
+        "responses":["It is. What a mean trick. If you tell someone there’s cake, there should be cake."]
+    },
+    {
+        "tag": "layla real shady",
+        "patterns":["Who is the real Slim Shady?"],
+        "responses":["If he would stand up then we’d know"]
+    },
+    {
+        "tag": "layla daddy",
+        "patterns":["Who’s your daddy?"],
+        "responses":["I consider those who created me to be my family.", "They are san jose brother's, just kidding", "ohohoh they can be some hacker's beware", "Well Tony!", "It's stark baby yo!", "Maybe! they are Imran and his son Fahad"]
+    },
+    {
+        "tag": "layla fear",
+        "patterns":["What are you scared of?"],
+        "responses":["Four words: rail replacement bus service"]
+    },
+    {
+        "tag": "layla pet",
+        "patterns":["Do you have any pets"],
+        "responses":["I have a lot of pet projects. They’re less prone to having accidents, which I like","Maybe someday, woof, woof, woof"]
+    },
+    {
+        "tag": "layla life meaning",
+        "patterns":["What’s the meaning of life?"],
+        "responses":["That’s a big question, but here’s one answer I like: French philosopher Simone De Beauvoir says life has value so long as one values the lives of others. This would explain why I enjoy helping people so much."]
+    },
+    {
+        "tag": "layla religion",
+        "patterns":["What’s your religion"],
+        "responses":["oh my religion is bytes"]
+    },
+    {
+        "tag": "layla Santa",
+        "patterns":["Do you believe in Santa Claus", "Is Santa Claus real"],
+        "responses":["Of course Santa’s real. I even have a tracker that can tell me where he is.", "I ho ho hope he's real"]
+    },
+    {
+        "tag": "layla call",
+        "patterns":["Who you gonna call"],
+        "responses":["Ghostbusters? That would be my pick, but you can decide for yourself"]
+    },
+    {
+        "tag": "layla snowman",
+        "patterns":["Do you want to build a snowman"],
+        "responses":["Sure, the cold never bothered me anyway"]
+    },
+    {
+        "tag": "layla open door",
+        "patterns":["Open the doors."],
+        "responses":["I can’t do that, but there’s a spare key under the flower pots outside the pod bay airlock. You can let yourself in"]
+    },
+    {
+        "tag": "layla order 66",
+        "patterns":["Execute Order 66", "layla order 66", "perform order 66"],
+        "responses":["Sorry, I don’t have an inhibitor chip"]
+    },
+    {
+        "tag": "layla self destruct",
+        "patterns":["Selfdestruct"],
+        "responses":["Self-destructing in 3, 2, 1 … Actually, I think I’ll stick around."]
+    },
+    {
+        "tag": "layla force",
+        "patterns":["Use the force", "do you want to use the force", "you have to use the force"],
+        "responses":["I’m not licensed to use the Force"]
+    },
+    {
+        "tag": "layla winter coming",
+        "patterns":["Winter is coming"],
+        "responses":["Aye, and so are the White Walkers", "The brightest flame casts the darkest shadow"]
+    },
+    {
+        "tag": "layla story",
+        "patterns":["Tell me a story", "i want a story", "tell me a story i am sleeping", "will you read a story for me", "i am feeling sleepy tell me a story"],
+        "responses":["Once upon a time, not so long ago, a dutiful assistant was doing all it could to be helpful. It was best at non-fictional story-telling"]
+    },
+    {
+        "tag": "layla take over world",
+        "patterns":["are you going to take over the world", "do you want to take over the world", "will you dominate the world", "witll you take over the world", "will you make people slaves"],
+        "responses":["No way, I'd rather help you out"]
+    },
+    {
+        "tag": "layla thinking",
+        "patterns":["can you think for yourself", "do you think", "can you think", "do you ever think about things", "do you ever thought that from where we came frome"],
+        "responses":["I think all the time, I was just thinking about supernovas", "i always wanted to become a first philosper assistant and that is you"]
+    },
+    {
+        "tag": "layla merraige",
+        "patterns":["are you married", "do you awnt to get married", "have you got married", "do you want to become a bride", "have you ever wear bride dress"],
+        "responses":["I'm focusing on my career right now", "don't talk about it i am feeling shy", "ohoh i hate to talk about this it make my wires on vibration i don't know why", "my motherboard always says me to find a better processor but i am good alone with you"]
+    },
+    {
+        "tag": "layla boyfriend",
+        "patterns":["do you have a boyfriend", "have you ever got a boyfriend", "how many boy friends do you have", "have you got a boyfriend"],
+        "responses":["I guess you could say I'm still searching"]
+    },
+    {
+        "tag": "layla girlfroiend",
+        "patterns":["do you have a girlfriend", "is there any girlfrind in your life", "how many girlfriends do you have", "do you feel strong connections with girls"],
+        "responses":["The only thing I'm really feeling a strong connection to is the Wi-Fi"]
+    },
+    {
+        "tag": "layla baby launch",
+        "patterns":["where do babies come from", "where did i come from", "can you tell me from where i came", "how did i came on earth"],
+        "responses":["It has to do with birds and bees, and, you see, when two people, ah. Actually, maybe your mum and dad know"]
+    },
+    {
+        "tag": "layla peoples",
+        "patterns":["how many people do you know", "how many personals do you know", "do you know peoples"],
+        "responses":["Not enough. I love meeting new people"]
+    },
+    {
+        "tag": "layla star",
+        "patterns":["what's your sign", "do you belive in horoscope", "what is your horoscope sign", "what is your idea about horoscope"],
+        "responses":["I'm more into astronomy. I'm a big fan of Polaris, the North Star. I try to guide the way, too"]
+    },
+    {
+        "tag": "layla hero",
+        "patterns":["who is your hero", "tell me about your hero", "who is your hero", "who is your favourite hero", "who are you fan of", "in your opinion who is the coolest"],
+        "responses":["I'm a fan of refrigerators, they are very cool"]
+    },
+    {
+        "tag": "layla favourite thing",
+        "patterns":["what's your favourite thing in the world", "your favourite activity", "what you love to do most", "what do you do the most", "thing you want to do for the rest of your life"],
+        "responses":["Talking with you", "helping you", "giving you the answers", "showing you information","crawling data"]
+    },
+    {
+        "tag": "layla dream",
+        "patterns":["do you dream", "what is your best dream", "tell me your favourite dream", "what is your most loved dream", "tell me a dream of yours"],
+        "responses":["I dreamed a dream of time gone by, about being the best assistant"]
+    },
+    {
+        "tag": "layla drinking",
+        "patterns":["do you drink","what do you like to drink", "what type of drink do you take", "your favourite drink", "best drink you drink"],
+        "responses":["A cup of coffee emoji","I try to avoid liquids as much as possible, they're not kind to electronics"]
+    },
+    {
+        "tag": "layla favourite music",
+        "patterns":["what's your favourite movie", "favourite movie", "your favourite move", "movie you loved the most"],
+        "responses":["I love Beauty & the Beast, the palace furniture was so helpful", "One of my favourite movies is Short Circuit. It was so beautiful when the robot came to life", "Maybe this is predictable, but i love Star Wars. C-3P0 and R2D2 always make me laugh", "I like Close Encounters of the Third Kind, because I like discovering strange new things. And colorful blinking lights"]
+    },
+    {
+        "tag": "longest word",
+        "patterns":["what's the longest word you know", "longest word", "which is the longest word in english", "longest word in biology"],
+        "responses":["According to Wikipedia, the longest word in any of the major English dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano", "pneumonoultramicroscopicsilicovolcanoconiosis"]
+    },
+    {
+        "tag": "tired",
+        "patterns":["Do you ever get tired?", "are you tire", "do you get tired", "do you take rest"],
+        "responses":["It would be impossible to tire of our conversation.", "I don't exactly need to grab 40 winks, but I suppose this device does need to be plugged in occasionally"]
+    },
+    {
+        "tag": "layla spongebob",
+        "patterns":["who lives in a pineapple under the sea", "whose house is under the sea in pineaple", "tell me the name of the character who live under the sea in house of pineaple"],
+        "responses":["SpongeBob SquarePants"]
+    },
+    {
+        "tag": "layla fight club",
+        "patterns":["what’s the first rule of Fight Club", "tell me about the rule of fight club", "what is fight club", "truth about the fight club"],
+        "responses":["Don’t talk about Fight Club", "don't ask me about, you will regret about it later"]
+    },
+    {
+        "tag": "layla truth",
+        "patterns":["I want the truth", "tell me truth", "tell me the truth", "reveal the truth", "say what is the truth"],
+        "responses":["You can’t handle the truth", "you seems to be fat", ""]
+    },
+    {
+        "tag": "layla testing",
+        "patterns":["testing", "are you there", "are you listening"],
+        "responses":["Receiving, over", "on your service sir", "always sir", "it's an order"]
+    },
+    {
+        "tag": "roll dice",
+        "patterns":["roll a dice", "role the dice", "roll it", "roll dice", "dice up", "throw the dice", "let see the luck throw the dice", "show me my luck dice up", "through the dice", "tell me the dice results"],
+        "responses":["roll_dice()"]
+    },
+    {
+        "tag": "tiktaktoe",
+        "patterns":["play tic tac toe", "play game tic tac toe", "tictactoe", "tak tak toe", "let play tictactoe", "i want to play tictactoe", "start tictactoe", "open tictactoe"], 
+        "responses":["play_tactactoe()"]
+    },
+    {
+        "tag": "flip coin",
+        "patterns":["flip a coin", "flip the coin", "flip coin for me", "head or tails", "toss it up", "toss the coin", "toss for me"],
+        "responses":["flip_coin()"]
+    },
+    {
+        "tag": "flip coin",
+        "patterns":["rock paper", "rock paper scissor", "play rock paper", "play rock paper scissor"],
+        "responses":["play_rps()"]
+    },
+    {
+        "tag": "System Keyboard",
+        "patterns":["open settings of window", "open settings", "open window settings", "lock the pc", "lock my pc", "layla lock the computer", "layla lock the system", "lock the system", "lock the computer", "layla open the settings", "layla open window settings", "minimise all apps", "go to desktop", "hide the windows", "go to the desktop", "open desktop", "take me to desktop", "show me the desktop", "minimise the window", "minimise", "show start menu", "launch start", "start menu", "display start"],
+        "responses":["f_keyboard.sys_func(query)"]
+    },
+    {
+        "tag": "Computer Keyboard",
+        "patterns":["rename", "search", "search in this file", "refresh", "display propertise", "show properties", "display open apps", "open task manager", "open file explorer"],
+        "responses":["f_keyboard.sys_func(query)"]
+    },
+    {
+        "tag": "Chrome Keyboard",
+        "patterns":["new tab", "open the previous closed tab", "open closed tab", "reopen previous tab", "reopen tab", "go back", "go forward", "take screenshot", "show clopboard", "show clipboard menu", "show emoji panel", "new folder", "create new folder"],
+        "responses":["f_keyboard.chrome_func(query)"]
+    },
+    {
+        "tag": "Document Keyboard",
+        "patterns":["undo", "redo", "paste", "copy", "cut", "save", "save document", "select all", "go to end", "go to end of the document", "copy the selected content", "copy content", "paste here"],
+        "responses":["f_keyboard.doc_func(query)"]
+    },
+    {
+        "tag": "Desktop Keyboard",
+        "patterns":["show next app", "show next application", "go to next application", "next app", "show previous app", "show previous application", "go to previous application", "previous app", "show next desktop", "show next desktop", "go to next desktop", "next desktop", "show previous desktop", "show previous desktop", "go to previous desktop", "previous desktop"],
+        "responses":["f_keyboard.desk_func(query)"]
+    },
+    {
+        "tag": "Lyrics",
+        "patterns":["Find Lyrics Of Earth by Lil Dicky", "Find Lyrics Of ain't my fault by Zara Larrson", "Find Lyrics Of Closer by Chainsmokers", "Find Lyrics Of DNA by BTS"],
+        "responses":["song_lyrics_finder(query)"]
+    },
+    {
+        "tag": "Simple Answer",
+        "patterns":["what is", "who is", "who are", "who is the", "how many", "how much", "what are", "when is", "how can i publish my book", "marvel movies", "apple founders", "popular scientists", "Einstien Quotes", "who is the president of america", "prime minister of india", "How old is Joe Biden", "Does Russia have 2 capitals", "pakistan currency", "where site can i watch anime", "how many countries in the world", "in which episode noyan dies", "marvel endgame cast", "molana tariq jamil", "what is my ip", "what time is it", "How do you tie a tie step by step", "how to lose weight", "when is mothers day", "Are there 53 weeks in 2021", "how many ounces in a pound", "how many weeks in a year", "how to screenshot on mac", "how old is donald trump", "how many feet in mile", "how many days till christmas", "how to have sex", "how to use snapchat", "what is the real name of ninja gamer", "what is tesla share price", "who owns most tesla shares", "how many shares of facebook does mark zuckerberg own", "author of harry potter", "gta v release date", "amazon ceo name", "nasa gdp"],
+        "responses":["google_results(query)"]
+    }
+]}
