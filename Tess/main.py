@@ -6,6 +6,7 @@ import nltk
 import os
 from nltk.stem import WordNetLemmatizer
 from tensorflow import keras
+from functions.simple import *
 import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 
@@ -15,7 +16,7 @@ intents = json.loads(open('Tess/basic-commands.json', encoding="utf8").read())
 
 words = pickle.load(open('Tess/words.pkl', 'rb'))
 classes = pickle.load(open('Tess/classes.pkl', 'rb'))
-model = keras.models.load_model('Tess/layla_model.h5')
+model = keras.models.load_model('Tess/tess_model.h5')
 
 
 def clean_up_sentence(sentence):
@@ -82,7 +83,6 @@ def layla_run():
             eval(res)
         except Exception as e:
             print(res)
-
 
 
 layla_run()

@@ -1,8 +1,8 @@
 {"intents": [
     {
         "tag": "greetings",
-        "patterns": ["hello", "hey", "good morning", "Hey man", "wake up layla"],
-        "responses": ["greet_main().decode('utf-8')"]
+        "patterns": ["hello", "hey", "good morning", "Hey man", "wake up tess", "hi tess", "hi"],
+        "responses": ["greet_main()"]
     },
     {
         "tag": "goodbye",
