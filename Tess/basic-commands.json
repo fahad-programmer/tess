@@ -7,13 +7,13 @@
     {
         "tag": "goodbye",
         "patterns": ["bye", "see you later", "good night"],
-        "responses": ["saying_bye_main().decode('utf-8')"]
+        "responses": ["saying_bye_main()"]
     },
     
     {
         "tag": "thanks",
         "patterns": ["thank you very much", "it is so nice of you", "you made my day", "thanks", "thanks for helping out", "you are the best", "you are genius"],
-        "responses": ["saying_thanks_main().decode('utf-8')"]
+        "responses": ["saying_thanks_main()"]
     },
 
     {

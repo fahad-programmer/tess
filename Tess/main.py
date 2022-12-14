@@ -8,6 +8,7 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow import keras
 from functions.simple import *
 import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+from voice_engine import speak
 
 
 
@@ -80,7 +81,7 @@ def layla_run():
         res = get_response(ints, intents)
         # answer = google_results(query)
         try:
-            eval(res)
+            speak(eval(res))
         except Exception as e:
             print(res)
 
